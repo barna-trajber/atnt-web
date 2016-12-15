@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorate="layout">
+<head>
+    <title>Funnel Management Tool</title>
+</head>
+
+
+<body>
+    <div th:fragment="bodyFragment" layout:fragment="content" class="container">
+        <link href="/css/about.css" rel="stylesheet" type="text/css" />
+        <div class="jumbotron">
+            <!--@if (User?.Identity?.IsAuthenticated ?? false)-->
+            <!--{-->
+            <!--<h2>Welcome, @User.Identity.Name @*@User.Identity.Name*@</h2>-->
+            <!--<p>-->
+                <!--@foreach (var claim in Context.User.Claims)-->
+                <!--{-->
+            <!--<div>@claim.Type: <b>@claim.Value</b>-->
+            <!--</div>-->
+            <!--}-->
+            <!--</p>-->
+
+            <!--if (!string.IsNullOrEmpty(Model))-->
+            <!--{-->
+            <!--<h3>Message received from the resource controller: @Model</h3>-->
+            <!--}-->
+
+            <!--<a class="btn btn-lg btn-danger signoutbtn" href="/Account/LogOut">Sign out</a>-->
+            <!--}-->
+
+            <!--else-->
+            <!--{-->
+            <h1>Welcome, anonymous</h1>
+            <a class="loginbtn" href="/account/index">
+                Log In
+            </a>
+            <!--}-->
+        </div>
+
+        <script type="text/javascript" src="/scripts/login.js"></script>
+    </div>
+</body>
+</html>

@@ -1,0 +1,241 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorate="layout">
+<head>
+
+</head>
+
+<body>
+	<div th:fragment="bodyFragment" layout:fragment="content" class="container">
+	
+	<link href="/css/title.css" rel="stylesheet" type="text/css" />
+    <link href="/css/form.css" rel="stylesheet" type="text/css" />
+    
+		<!-- Titlebar -->
+	    <div>
+	        <div class="progress formtitle" style="text-align: center; max-width:1000px; width:80%">
+	            <div id="titleBar" class="progress-bar" role="progressbar">
+	                Sunset an application
+	            </div>
+	        </div>
+	    </div>
+
+		<form action="appservices/createsunset" method="post"
+		      class="form-horizontal form-input"
+		      role="form"
+		      id="frmSunsetRequest"
+		      style="width: 80%; max-width: 1000px">
+		
+		<!--Validation errors!-->
+		<div class="row">
+		    <div class="col-md-10 col-md-offset-1">
+		        <div id="serverValidationError" class="alert alert-danger" style="display: none">
+		            <div>
+		                <!--validation error content-->
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		
+		<!--TEXTBOX FIELD: iRFP - BTMT asset to be Sunseted-->
+		<div class="row" style="margin-top: 15px">
+		    <!--LABEL-->
+		    <div class="col-md-6 label-left" style="padding-top: 6px">
+		        <label class="control-label label-left">
+		            Select your <b>iRFP - BTMT</b> asset to be sunset
+		        </label>
+		        <span class="required">*</span>
+		    </div>
+		
+		    <!--INPUT FIELD-->
+		    <div class="col-md-6">
+		        <input asp-for="AssetName" class="form-control"
+		               placeholder="Type an iRFP asset record"
+		               style="width: 100%"/>
+		    </div>
+		</div>
+		
+		
+		<!-- iRFP - BTMT asset info panel -->
+		<div class="row" style="margin-top: 15px">
+		    <div class="col-lg-12 col-md-12 col-sm-12">
+		        <div class="panel panel-primary">
+		            <div class="panel-heading">iRFP - BTMT asset info</div>
+		            <div class="panel-body">
+		
+		                <!--TEXTBOX FIELD: Asset Name-->
+		                <div class="row">
+		                    <!--LABEL-->
+		                    <div class="col-md-6  label-right" style="padding-left: 0">
+		                        <label class="control-label">
+		                            iRFP - BTMT Asset Name
+		                        </label>
+		                    </div>
+		
+		                    <!--TEXT INFO FIELD-->
+		                    <div class="col-md-6 label-left">
+		                        <label class="control-label"> 
+		                            2012ITRisk-EP09.03: Data Protection (DCCT)
+		                        </label>
+		                    </div>
+		                </div>
+		
+		                <!--TEXTBOX FIELD: Asset Type-->
+		                <div class="row">
+		                    <!--LABEL-->
+		                    <div class="col-md-6 label-right" style="padding-left: 0">
+		                        <label asp-for="AssetType" class="control-label">
+		                            iRFP - BTMT Asset Type
+		                        </label>
+		                    </div>
+		
+		                    <!--TEXT INFO FIELD-->
+		                    <div class="col-md-6  label-left">
+		                        <label class="control-label"> 
+		                            Infrastructure Support
+		                        </label>
+		                    </div>
+		                </div>
+		
+		                <!--TEXTBOX FIELD: Asset Status-->
+		                <div class="row">
+		                    <!--LABEL-->
+		                    <div class="col-md-6 label-right" style="padding-left: 0">
+		                        <label asp-for="AssetStatus" class="control-label ">
+		                            iRFP - BTMT Asset Status
+		                        </label>
+		                    </div>
+		
+		                    <!--TEXT INFO FIELD-->
+		                    <div class="col-md-6 label-left">
+		                        <label class="control-label ">
+		                            In development
+		                        </label>
+		                    </div>
+		                </div>
+		
+		                <!--TEXTBOX FIELD: Domain name-->
+		                <div class="row">
+		                    <!--LABEL-->
+		                    <div class="col-md-6 label-right" style="padding-left: 0">
+		                        <label asp-for="DomainName" class="control-label ">
+		                            Domain name
+		                        </label>
+		                    </div>
+		
+		                    <!--TEXT INFO FIELD-->
+		                    <div class="col-md-6 label-left">
+		                        <label class="control-label ">
+		                            IT Risk and Security
+		                        </label>
+		                    </div>
+		                </div>
+		
+		                <!--TEXTBOX FIELD: Sub-domain name-->
+		                <div class="row">
+		                    <!--LABEL-->
+		                    <div class="col-md-6 label-right" style="padding-left: 0">
+		                        <label asp-for="SubDomainName" class="control-label">
+		                            Sub-Domain name
+		                        </label>
+		                    </div>
+		
+		                    <!--TEXT INFO FIELD-->
+		                    <div class="col-md-6 label-left">
+		                        <label class="control-label">
+		                            Manage Risk
+		                        </label>
+		                    </div>
+		                </div>
+		
+		            </div>
+		        </div>
+		    </div>
+		</div>
+		
+		
+		<!--DATE FIELD: Target Date-->
+		<div class="row" style="margin-top: 15px">
+		    <!--LABEL-->
+		    <div class="col-md-6 label-left" style="padding-top: 6px">
+		        <label asp-for="TargetDate" class="control-label">
+		            What is your target date?
+		        </label>
+		        <span class="required">*</span>
+		    </div>
+		
+		    <!--DATE FIELD-->
+		    <div class="col-md-6 label-left">
+		        <!-- Transaction's Date picker-->
+		        <input asp-for="TargetDate"
+		               id="TargetDate"
+		               name="TargetDate"
+		               required="required"
+		               style="width: 200px; max-width: 100%"
+		               type="text"
+		               validationmessage="Target date is required!">
+		    </div>
+		</div>
+		
+		<!-- Validation (Target date)-->
+		<div class="row" style="margin-bottom: 0">
+		    <div class="col-md-12">
+		        <span class="k-invalid-msg" data-for="datepicker"></span>
+		    </div>
+		</div>
+		
+		
+		<!--TEXTBOX FIELD: Account ID-->
+		<div class="row" style="margin-top: 15px">
+		    <div class="col-md-6 label-left" style="padding-top: 6px">
+		        <!--Label-->
+		        <label asp-for="AccountId" class="control-label">
+		            Please provide your Account ID
+		        </label>
+		    </div>
+		
+		    <div class="col-md-6">
+		        <!--Textbox-->
+		        <input asp-for="AccountId" class="form-control" placeholder="Account ID"
+		               style="width:100%"/>
+		
+		    </div>
+		</div>
+		
+		<!--Note-->
+		<div class="row" style="margin-top: 15px">
+		    <div class="col-md-6 label-left" style="padding-top: 6px">
+		        <!--Note label-->
+		        <label for="Note" class="control-label">
+		            Note
+		        </label>
+		    </div>
+		
+		    <div class="col-md-6">
+		        <!--Note textbox-->
+		        <input class="form-control" placeholder="Note"
+		               id="Note"
+		               name="Note"
+		               style="width:100%"/>
+		
+		    </div>
+		</div>
+		
+		<!--Cancel/Save buttons-->
+		<div class="control-group" style="text-align: center; margin-left: 0px; margin-top: 35px">
+		    <div class="controls" style="margin-left: 0px">
+		        <a class="btn btn-primary" href="/home/index" style="margin-right: 20px" id="btnCancel">Cancel</a>
+		        <button class="btn btn-success" type="submit" id="btnSave">Submit</button>
+		    </div>
+		</div>
+		
+		<input type="hidden" name="sunsetId" id="sunsetId" value="-1"/> <!--Sunset ID hidden input-->
+		
+		</form>
+
+		<script type="text/javascript" src="/scripts/sunsetform.js" th:src="@{/scripts/sunsetform.js}"></script>
+
+	</div>
+</body>
+</html>

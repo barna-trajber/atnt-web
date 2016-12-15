@@ -1,0 +1,25 @@
+{
+  "name": "Funnel.Management.Tool",
+  "authors": [
+    "Barna Trajber <barna.trajber@hu.ibm.com>"
+  ],
+  "description": "AT&T funnel",
+  "main": "index",
+  "keywords": [
+    "java",
+    "web"
+  ],
+  "license": "MIT",
+  "homepage": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "3.3.7",
+    "jquery": "^3.1.1"
+  }
+}

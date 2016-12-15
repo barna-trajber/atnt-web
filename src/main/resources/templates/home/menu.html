@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorate="layout">
+<head>
+    <title>Funnel Management Tool</title>
+</head>
+<body>
+
+<div th:replace="layout :: menu">
+    <nav class="navbar navbar-bluemix navbar-fixed-top">
+        <div class="container-fluid menubar">
+
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a id="menuHome" class="navbar-brand menuitem menuHome" href="/Home/Index">
+                    <img id="menuLogo"
+                         src="/static/images/logo_white_transparent.png"
+                    />
+
+                </a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <!-- Everything you want hidden at 940px or less, place within here -->
+                <ul class="nav navbar-nav">
+                    <!-- ---MENU ITEM: Application Services--- -->
+                    <li id="menuApplicationServices" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-text-background" aria-hidden="true"></span> Application Services
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/Consulting/AppServices" class="menuitem menuConsult"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> Consulting</a></li>
+                            <li><a href="/Deploy/AppServices" class="menuitem menuDeploy"><span class="glyphicon glyphicon-play" aria-hidden="true"></span> App Deploy</a></li>
+                            <li><a href="/Change/AppServices" class="menuitem menuChange"><span class="glyphicon glyphicon-edit" aria-hidden="true"></span> App Change</a></li>
+                            <li><a href="/SunsetRequest/AppServices" class="menuitem menuSunset"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span> App Sunset</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="divider-vertical"></li>
+
+                    <!--@*-&#45;&#45;MENU ITEM: Infrastructure Services-&#45;&#45;*@-->
+                    <li id="menuInfrastructureServices" class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            <span class="glyphicon glyphicon-compressed" aria-hidden="true"></span> Infrastructure Services
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="/Consulting/InfrastructureServices" class="menuitem menuConsult"><span class="glyphicon glyphicon-earphone" aria-hidden="true"></span> Consulting</a></li>
+                            <li><a href="/Manage/InfrastructureServices" class="menuitem menuManage"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Server Management</a></li>
+                            <li><a href="/Build/InfrastructureServices" class="menuitem menuBuild"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Server Build</a></li>
+                            <li><a href="/Decommission/InfrastructureServices" class="menuitem menuDecommission"><span class="glyphicon glyphicon-remove-sign" aria-hidden="true"></span> Server Decommission</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="divider-vertical"></li>
+
+                    <!--@*-&#45;&#45;MENU ITEM: Projects-&#45;&#45;*@-->
+                    <li id="menuProjects">
+                        <a href="/project/index" class="menuitem">
+                            <span class="glyphicon glyphicon-list" aria-hidden="true"></span> Projects</a>
+                    </li>
+                </ul>
+
+
+
+                <ul class="nav navbar-nav navbar-right">
+                    <!--@*-&#45;&#45;MENU ITEM: ToDo app-&#45;&#45;*@-->
+                    <li id="menuToDo">
+                        <a href="/Todo/Index" class="menuitem"><span class="glyphicon glyphicon-apple" aria-hidden="true"></span> ToDo app</a>
+                    </li>
+
+                    <!--@*-&#45;&#45;MENU ITEM: About-&#45;&#45;*@-->
+                    <li id="menuAbout">
+                        <a href="/Home/About" class="menuitem"><span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span> About</a>
+                    </li>
+
+                    <li role="separator" class="divider"></li>
+
+                    <!--@*-&#45;&#45;MENU ITEM: Log In / User profile-&#45;&#45;*@-->
+                    <!--@if (LoggedInUser != null || (User?.Identity?.IsAuthenticated != null && User.Identity.IsAuthenticated))-->
+                    <!--{-->
+
+                    <!--@*-&#45;&#45;Logged in: User Profile-&#45;&#45;*@-->
+                    <li id="menuProfile" class="dropdown global-account">
+                        <a href="#" class="dropdown-toggle global-profile" data-toggle="dropdown">
+                            <div class="global-profile_avatar">
+                                <img class="global-profile_default-photo" />
+                            </div>
+
+                            <div class="global-profile_information">
+                                <div class="global-profile_name">
+                                    <span class="global-profile_fullname"> </span>
+                                </div>
+
+                                <div class="global-profile_details">
+                                    <span class="global-profile_username"> </span>
+                                    <span class="global-profile_role"> </span>
+                                </div>
+                            </div>
+                        </a>
+
+                        <ul class="dropdown-menu">
+                            <li><a href="/Settings/Account" class="menuitem"><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Settings</a></li>
+                            <li><a id="deleteUser" href="/" class="menuitem"><span class="glyphicon glyphicon-trash" aria-hidden="true"></span> Delete account</a></li>
+                            <li><a href="/ChangePassword/Account" class="menuitem"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Change password</a></li>
+                            <li class="divider"></li>
+                            <li><a href="/LogOut/Account"><span class="glyphicon glyphicon-off" aria-hidden="true"></span> Log out</a></li>
+                        </ul>
+                    </li>
+                    <!--}-->
+                    <!--else-->
+                    <!--{-->
+                    <!---->
+                    <!--@*-&#45;&#45;Not Logged in: Log In button-&#45;&#45;*@-->
+                    <li id="menuLogin" class="global-account">
+                        <a class="menuitem btn" href="/Account/Index">
+                            Log In
+                        </a>
+                    </li>
+                    <!--}-->
+                </ul>
+            </div><!-- /.navbar-collapse -->
+
+        </div><!-- /.container-fluid -->
+    </nav>
+
+</div>
+
+</body>
+</html>

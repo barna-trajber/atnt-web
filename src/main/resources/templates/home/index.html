@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorate="layout">
+<head>
+    <title>Funnel Management Tool</title>
+</head>
+
+<body>
+
+<div th:fragment="bodyFragment" layout:fragment="content" class="container">
+    <form method="post"
+            style="width: 90%; max-width: 1000px; border-color: transparent; margin: 0px auto; background-color: transparent"
+            class="form-input form-horizontal"
+            role="form"
+            id="frmHome">
+
+    <!--Server Validation errors!-->
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div id="serverValidationError" class="alert alert-danger" style="display: none">
+                <div>
+                    <!--validation error content-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--MENU Action buttons-->
+    <div id="mainPage" class="mainPage">
+        <div class="row">
+            <div class="col-md-4 row-left-side">
+                <!--Application Services-->
+                <a href="/appservices/sunsetrequest" class="menuSunset btn a-side appservices" style="width: 100%; height: 100%">
+                <span>Application Services</span>
+                </a>
+
+            </div>
+
+            <div class="col-md-4 col-inside-outer">
+                <div class="row">
+                    <div class="col-md-6 col-inside">
+                        <!--Overview-->
+                        <a href="Index/Overview" class="menuOverview btn a-inside overview">
+                        <span>Overview</span>
+                        </a>
+                    </div>
+
+                    <div class="col-md-6 col-inside">
+                        <!--Report-->
+                        <a href="Index/Report" class="menuReports btn a-inside report" style="width: 100%; height: 100%">
+                        <span>Reports</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 col-inside">
+                        <!--Convert currency-->
+                        <a href="Convert/Currency" class="menuCurrConvert btn a-inside currency" style="width: 100%; height: 100%">
+                        <span>Convert</span>
+                        </a>
+                    </div>
+
+                    <div class="col-md-6 col-inside">
+                        <!--Group-->
+                        <a href="Index/Group" class="menuGroups btn a-inside group" style="width: 100%; height: 100%">
+                        <span>Groups</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-md-4  row-right-side">
+                <!--New rec transaction-->
+                <a href="Index/InfrastructureServices" class="menuRecTran btn a-side infrastructureservices" style="width: 100%; height: 100%">
+                <span>Infrastructure Services</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    </form>
+    
+    <script src="/scripts/home.js" th:src="@{/scripts/home.js}" type="text/javascript"></script>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,222 @@
+﻿nav #menuLogo {
+    max-width: 100px; 
+    margin-top: -5px; 
+    max-height: 30px;
+}
+
+nav #menuLogin .btn {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #5aaafa;
+    color: #152935;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 30px;
+    padding: 0 15px;
+    -webkit-transition: background 200ms ease-in;
+    transition: background 200ms ease-in;
+    border-radius: 0;
+
+    margin-top: 15px;    
+    padding: 0 20px 0 20px !important;
+}
+
+nav #menuLogin .btn:hover {
+    background-color: #73b7fb;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: #fff;
+}
+
+/*nav {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 5% 0 5%;
+    margin: 0;
+    border: 0;
+}*/
+
+.navbar-nav > li > a, .navbar-brand {
+    padding-top: 20px !important; 
+    padding-bottom: 20px !important;
+    padding-left: 1em;
+    padding-right: 1em;
+
+    height: 60px;
+
+    color: #7cc7ff;
+    font-weight: 700;
+    /*font-size: 0.875rem;*/
+    
+    text-decoration: none;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    -webkit-transition: color 200ms;
+    transition: color 200ms;
+}
+.navbar {
+    min-height:60px !important;
+    line-height: 60px !important;
+    padding: 0 5% 0 5%;
+    margin: 0;
+    border: 0;
+}
+
+.navbar-bluemix {
+    background-color: #152935;    
+}
+
+/*nav .navbar-nav > a {
+    color: #7cc7ff;
+    font-weight: 700;    
+    padding-left: 1em;
+    padding-right: 1em;
+    text-decoration: none;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    -webkit-transition: color 200ms;
+    transition: color 200ms;
+}*/
+
+/* Profile menu styles */
+
+#menuProfile .global-profile {
+   color: #dfe6eb;
+    padding: 10px 12px 9px 12px !important;    
+    cursor: pointer;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 100%;
+    padding: 0.75rem;
+    text-decoration: none;
+    background-color: #152935;
+    -webkit-transition: background-color 200ms;
+    transition: background-color 200ms;
+}
+
+#menuProfile .global-profile:hover, #menuProfile .global-profile:focus {
+        background-color: #233642;
+}
+
+#menuProfile .global-profile:hover .global-profile_avatar, #menuProfile .global-profile:focus .global-profile_avatar {        
+        border-color: #7cc7ff;
+}
+
+#menuProfile .global-profile:hover .global-profile_name, #menuProfile .global-profile:focus .global-profile_name {        
+        color: #7cc7ff;
+}
+
+
+#menuProfile .global-profile_avatar {
+        position: relative;
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    margin: 0;
+    margin-right: 10px;
+    overflow: hidden;
+    border: 2px solid #dfe6eb;
+    border-radius: 50%;
+        transition: border 200ms;
+    background-image: none;
+    padding: 0;
+        color: #dfe6eb;
+            margin-right: 0.625rem;
+    float: left;
+}
+
+#menuProfile .global-profile_default-photo {
+    background: url('../images/user-image.png') no-repeat 1px;
+    height: 35px;
+    background-size: 35px;
+        width: 36px;
+    margin: -1px;
+    margin-left: -2px;
+}
+
+
+#menuProfile .global-profile_information {
+        position: relative;
+    cursor: pointer;
+
+    width: auto;
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+    text-decoration: none;
+    
+    display: inline;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    overflow: hidden;
+    -webkit-transform: translateX(300px);
+    transform: translateX(300px);
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+
+        padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    margin: 0;
+
+}
+
+
+
+
+#menuProfile .global-profile_name {
+    display: inherit;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    color: #dfe6eb;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    -webkit-transition: color 200ms;
+    transition: color 200ms;
+}
+
+#menuProfile .global-profile_fullname {
+    display: inline;
+}
+
+
+#menuProfile .global-profile_details {
+        color: #c7c7c7;
+    font-size: 10px !important;
+    line-height: 1.5;
+    letter-spacing: 0.4px;
+    opacity: 1;
+        margin: 0;
+    padding: 0;
+    border: 0;
+        font: inherit;
+    vertical-align: baseline;
+    display: flex;
+}
+
+#menuProfile .global-profile_username {
+    display: inline;
+}
+
+
+#menuProfile .global-profile_username:after {
+    content: '|';
+    padding-left: 3px;
+    padding-right: 3px;
+}
+
+#menuProfile .global-profile_role {
+    display: inline;    
+}
+/* END OF: Profile menu styles */

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorate="layout">
+<head>
+    <title>Funnel Management Tool</title>
+</head>
+
+
+<body>
+<div th:fragment="bodyFragment" layout:fragment="content" class="container">
+    <link href="/css/login.css" rel="stylesheet" type="text/css"/>
+    <link href="/css/auth-providers.css" rel="stylesheet" type="text/css" />
+
+
+    <div id="form-signin" class="form-signin" style="max-width: 350px">
+        <h1 class="form-signin-heading" style="text-align: center; padding-bottom: 15px; font-size: 23px; font-weight: bold; font-family: Helvetica;">
+            Log in to Funnel Management Tool
+        </h1>
+
+        <!--Validation errors!-->
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div id="loginError" class="text-danger alert alert-danger alert-dismissible" role="alert" style="display: none">
+                    <div>
+                        <!--validation error content-->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!--External login providers-->
+        <div class="row">
+            <div class="col-md-12">
+                <div th:replace="account/_externalLoginList :: externalLogin">
+                </div>
+            </div>
+        </div>
+
+        <hr style="margin-top: 0px" />
+
+        <form action="account/login" method="post"
+              class="form-horizontal"
+              role="form"
+              id="frmLogin">
+
+            <!--LABEL: Email or username-->
+            <div class="row">
+                <label id="UsernameOrEmail" class="control-label label-left"></label>
+            </div>
+
+            <!--INPUT: Email or username-->
+            <div class="row">
+                <div class="form-group">
+                    <div class="col-md-12">
+                        <input tabindex="0" autocomplete="off" type="text" maxlength="31" id="inputEmail"
+                               asp-for="UsernameOrEmail" class="form-control" placeholder="Email or UserName"
+                               style="width: 100%; background-color: rgb(21, 41, 52); color: rgb(255, 255, 255); font-size: 1.2rem;"/>
+                    </div>
+                </div>
+            </div>
+
+            <!--LABEL: Login and register buttons-->
+            <div class="forgotfield" style="display: block;">
+                <label asp-for="Password" class="control-label label-left"></label>
+               <!-- @*<span class="forgotlink ibmid-ctx-forgotPasw">
+                    <a tabindex="1" id="ng-mobile-forgotPaswd" onclick="ibmIDC.signInEventTag('Forgot IBM id PW', 'Forgot IBM id PW'); return true;" href="https://www.ibm.com/account/us-en/forgot/forgot-password-start.html?a=FloTKCRbMX" style="color: rgb(90, 170, 250);">
+                        Forgot your password?
+                    </a>
+                </span>*@-->
+                <p>
+                <span style="position: relative; display: block; height: 50px;">
+                        <input tabindex="0" autocomplete="off" type="password" maxlength="31" id="password" name="password"
+                               asp-for="Password" class="form-control" placeholder="Password"
+                               style="width: 100%; background-color: rgb(21, 41, 52); color: rgb(255, 255, 255); font-size: 1.2rem;" />
+                    </span>
+                    <span id="pwdErrorMsg" style="color: rgb(255, 80, 80); display: none; font-weight: 600;">&nbsp;</span>
+                </p>
+            </div>
+
+            <!--Login and register buttons-->
+            <div class="row">
+                <button type="submit" tabindex="1" id="signinbutton"
+                        class="ng-signin-cta-2 button buttonRegister login-true loginbutton"
+                        style="display: block; width: 260px; padding: 18px 0px; color: rgb(45, 63, 73); background-color: rgb(90, 170, 250); font-weight: 600; text-transform: uppercase; margin: 0px auto;">
+                    Log in
+                </button>
+            </div>
+
+        </form>
+    </div>
+
+    <script type="text/javascript" src="/scripts/login.js"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,335 @@
+/* style.css
+ * This file provides css styles.
+ */
+
+@font-face {
+  font-family: 'OxygenLight';
+  src: url('../lib/font-oxygen/Oxygen-Light.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'Oxygen';
+  src: url('../lib/font-oxygen/Oxygen-Light.ttf') format("truetype");
+}
+
+@font-face {
+  font-family: 'OxygenBold';
+  src: url('../lib/font-oxygen/Oxygen-Light.ttf') format("truetype");
+}
+
+#ajaxLoader {
+	background: url("../images/ajax-loader.gif") no-repeat scroll center center transparent;
+	position: absolute;
+	height: 85%;
+	width: 99%;
+	z-index: 1100;
+}
+
+body,html {	
+	background-color: #3b4b54 !important;
+	width: 100%;
+	height: 100%;
+	margin: 0 auto;    
+	font-family: 'Oxygen';    
+	/*font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;*/
+}
+
+
+.mainContent {
+	width: 100%;
+	background-color: #3b4b54; /*#313f4a;*/
+	height: 95%;
+	margin-left: 0;
+	margin-right: 0;
+
+}
+
+.center {
+	padding-top: 10%;
+}
+
+a {
+	text-decoration: none;
+	color: #00aed1;        
+
+}
+a:hover {
+	text-decoration: underline;
+}
+
+.newappIcon {
+	padding-top: 10%;
+	display: block;
+	max-width: 200px;
+	max-height: 200px;
+	margin: 0 auto;
+	padding-bottom: 2em;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 2em;
+	padding-left: 10%;
+	padding-right: 10%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.description {
+	padding-left: 50px;
+	padding-right: 50px;
+	text-align: center;
+}
+
+.blue {
+	color: #00aed1;        
+
+}
+
+/* header footer common */
+header,footer {
+	width: 100%;
+	text-align: center;
+	color: #fff;
+}
+
+/* content width */
+.title,.tips,section,.records {
+	width: 600px;
+}
+
+@media ( max-width : 600px) {
+	.title,.tips,section {
+		width: 100%;
+	}
+}
+
+
+
+/* alignment */
+.title,.tips,section,.records {
+	margin: 0 auto;
+}
+
+/* background color */
+.leftHalf {
+	float: left;
+	background-color: #26343f;
+	width: 45%;
+	height: 100%;
+}
+
+
+footer {
+	position: relative;
+}
+
+.title,.tips {
+	height: 30px;
+	padding-top: 10px;
+	position: relative;
+}
+
+.title {
+	border-radius: 10px 10px 0 0;
+}
+
+.tips {
+	border-radius: 0 0 10px 10px;
+}
+
+table {
+	table-layout: fixed;
+	word-wrap: break-word;
+	position: relative;
+	border-collapse: collapse;
+	width: 100%;
+}
+
+.content {
+	padding: 5px;
+}
+
+.records textarea {
+	/*height: 1.5em;*/
+	height: 48px;
+	font-size: 1em;
+	resize: none;
+	width: 100%;
+	border: none;
+	background-color: transparent;
+	color: #fff;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light",
+		"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+	font-size: .9em;
+	padding:8px;
+}
+
+button {
+	outline: none;
+}
+
+/* buttons */
+.detailBtn {
+	position: absolute;
+	left: 20px;
+	top: 0px;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+.addBtn {
+	position: absolute;
+	right: 20px;
+	top: 0px;
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+/* dynamic effect */
+.records tr:hover .deleteBtn {
+	background: url('/images/remove.png') no-repeat 3px;
+	cursor: pointer;
+	border-color: transparent;
+}
+
+.records tr:nth-child(odd) {
+	background: #374550
+}
+
+#dbserviceinfo {
+	border-top: 1px solid #fff;
+}
+
+#dbserviceinfo td {
+	padding: 5px;
+	color: #fff;
+}
+
+.fieldname {
+	text-align: right;
+}
+
+.menuitem span.glyphicon {
+	margin-right: 5px;
+}
+
+
+
+.row { margin-left: 0px;
+	   margin-right: 0px; }
+
+#mainPage {
+	font-family: 'OxygenLight';
+	margin-top: 200px;
+}
+
+#mainPage a {
+	background-color: #E4F1FE;
+	/*background-color: #ecf0f1;*/
+					  
+	/*background-color: rgb(239, 244, 255);*/    
+	/*color:white;*/
+}
+
+/* -- MAIN PAGE STYLE -- */
+#mainPage .row-left-side {
+	/*float: left;*/
+	height: 300px;
+	padding: 1px;
+	padding-left: 0;    
+}
+
+
+#mainPage .row-right-side {
+	/*float: right;*/
+	height: 300px;
+	padding: 1px;
+	padding-right: 0;
+}
+
+
+#mainPage .col-inside {
+	height: 150px;
+	margin: 0;
+	padding: 1px;
+}
+
+#mainPage .col-inside-outer {
+	padding: 0;
+}
+
+#mainPage .col-inside .a-inside {
+	width: 100%; 
+	height: 100%; 
+}
+
+#mainPage .col-inside-outer {
+	padding: 0;
+}
+
+
+#mainPage span {
+	padding: 0;
+	font-size: 22px;
+	font-weight: normal; 
+	display: block;
+	text-align: left;
+}
+
+
+
+#mainPage a:after {
+	font-family: "Glyphicons Halflings";
+	font-size: 50px;
+	margin-top: 10px;
+}
+
+#mainPage a.a-side:after {
+	font-size: 90px;
+}
+
+#mainPage a.a-inside span {
+	margin-bottom: 10px;
+}
+
+#mainPage a.a-side span {
+	margin-bottom: 55px;
+}
+
+#mainPage a.overview:after {
+	content: "\e056";
+}
+
+#mainPage a.report:after {
+  content: "\e105";
+}
+
+#mainPage a.currency:after {
+	content: "\e031";
+}
+
+#mainPage a.group:after {
+	content: "\e087";
+}
+
+#mainPage a.appservices:after {
+	content:"\e243";   
+}
+
+#mainPage a.infrastructureservices:after {
+	content:"\e181";
+}
+
+div.overviewDetails.rectran #deleteButton:after {
+	font-family: "Glyphicons Halflings";
+	font-size: 30px;
+	margin-top: 1px;
+	content: "\e115";
+	margin-right: 10px;
+}
+
+/* -- END OF MAIN PAGE STYLE -- */

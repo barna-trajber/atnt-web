@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <link rel="stylesheet" th:href="@{/css/menu.css}" href="/css/menu.css"/>
+    <script th:src="@{/scripts/menu.js}" src="/scripts/menu.js" type="text/javascript"></script>
+</head>
+<body>
+
+<div th:fragment="header">
+    <link href="~/css/title.css" rel="stylesheet" type="text/css" />
+
+    <div class="progress formtitle" style="text-align: center; max-width:@ViewData["FormMaxWidth"]; width:@ViewData["FormWidth"];">
+    <div id="titleBar" class="progress-bar" role="progressbar">
+        @ViewData["FormTitle"]
+    </div>
+</div>
+
+
+</body>
+</html>

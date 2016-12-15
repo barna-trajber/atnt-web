@@ -1,0 +1,16 @@
+﻿#grid {
+    height: 70%;
+    max-height: 1500px;
+    min-height: 100px;
+    max-width: 1600px;
+    margin: 0px auto;
+}
+
+#grid .customer-photo {
+
+    background: url('../images/user-image.png') no-repeat 1px;
+    height: 35px;
+    margin-bottom: -30px;
+    background-size: 35px;
+}
+

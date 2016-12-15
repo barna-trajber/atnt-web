@@ -1,0 +1,136 @@
+﻿
+/* --- GOOGLE --- */
+/* Google login button */
+.Button.btn.unAuthGoogleConnect {
+    background-color: #ef6666;
+    background: -webkit-gradient(linear, left top, left bottom, from(#f87474), to(#e65858));
+    background: -webkit-linear-gradient(#f87474, #e65858);
+    background: linear-gradient(#f87474, #e65858);
+    border: 1px solid #e34242;
+    border-top-color: #e65858;
+    color: #444;
+    text-shadow: 0 1px #fff;
+}
+
+.Button.btn.unAuthGoogleConnect:hover {
+    background-clip: padding-box;
+    background-color: #e34242;
+    background: linear-gradient(#e34242, #e65858);
+}
+
+/* Google logo */
+.Button.btn.unAuthGoogleConnect em.signInAuthLogo {
+    width: 41px;
+    height: 41px;
+    background: url("/images/google-plus_logo.png") 5px 5px no-repeat;
+    /*background-color: #e65858;
+    background-color: rgba(255,255,255,0.07);*/
+}
+
+
+
+/* --- IBM W3 ID --- */
+/* W3 ID login button */
+.Button.btn.unAuthIBMW3Connect {
+    background-color: #4178be;
+    background: -webkit-gradient(linear, left top, left bottom, from(#4178be), to(#2e64a9));
+    background: -webkit-linear-gradient(#4178be, #2e64a9);
+    background: linear-gradient(#4178be, #2e64a9);
+    border: 1px solid #4178be;
+    border-top-color: #4178be;
+    color: #444;
+    text-shadow: 0 1px #fff;
+}
+
+.Button.btn.unAuthIBMW3Connect:hover {
+    background-clip: padding-box;
+    background-color: #387ace;
+    background: linear-gradient(#387ace, #387ace);
+}
+
+/* IBM W3 ID logo */
+.Button.btn.unAuthIBMW3Connect em.signInAuthLogo {
+    width: 41px;
+    height: 41px;
+    background: url("/images/ibm_w3id_trans.png") 0 9px no-repeat;
+    /*background-color: #4178be;    */
+}
+
+/*.signInButtonText .ibm_w3 {
+    color: #4178be;
+}
+
+.signInButtonText .ibm_id {
+    font-weight: bold;
+}*/
+
+/* --- LINKEDIN --- */
+/* LinkedIn login button */
+.Button.btn.unAuthLinkedInConnect {
+    background-color: #0077B5;
+    background: -webkit-gradient(linear, left top, left bottom, from(#00A0DC), to(#005E93));
+    background: -webkit-linear-gradient(#00A0DC, #005E93);
+    background: linear-gradient(#00A0DC, #005E93);
+    border: 1px solid #1c7fa8;
+    /*border-top-color: #004471;*/
+    color: #444;
+    text-shadow: 0 1px #fff;
+}
+
+.Button.btn.unAuthLinkedInConnect:hover {
+    background-clip: padding-box;
+    background-color: #1c7fa8;
+    background: linear-gradient(#1c7fa8, #004471);
+}
+
+/* LinkedIn logo */
+.Button.btn.unAuthLinkedInConnect em.signInAuthLogo {
+    width: 41px;
+    height: 41px; 
+    background: url("/images/linkedin_logo.png") 2px 2px no-repeat;
+    /*background-color: #0077B5;*/
+    /*background-color: rgba(255,255,255,0.08);*/
+}
+
+/* Login buttons main style */
+.btn.registerLoginButton {
+    height: 42px;
+    position: relative;    
+    margin-bottom: 10px;
+    margin-right: 0;
+    text-align: left;
+    width: 100%;
+    padding: 0;
+}
+
+.Button.btn.rounded {
+    border-radius: 3px;
+}
+
+.Button.large {
+    font-size: 15px;
+    /*padding: 10px 18px;*/
+}
+
+/* Login button logo main style */
+.Button.btn.registerLoginButton em {
+    left: 0;
+    position: absolute;
+    padding: 0;
+    top: 0;
+
+    display: inline-block;
+    outline: none;
+    position: relative;
+    vertical-align: middle;
+}
+
+
+/* Login button text (Sign in with...) */
+.Button.btn.registerLoginButton span {
+    display: inline-block;
+    margin-left: 10px;
+    margin-top: -3px;
+    color: #fff;
+    text-shadow: 0 -1px rgba(0,0,0,0.25);
+}

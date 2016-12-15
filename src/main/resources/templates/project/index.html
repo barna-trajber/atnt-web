@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorate="layout">
+<head>
+    
+</head>
+<body>
+
+<div th:fragment="bodyFragment" layout:fragment="content">
+	<link href="/css/title.css" rel="stylesheet" type="text/css" />
+	<link href="/css/kendo-grid.css" rel="stylesheet" type="text/css" />
+	
+	
+    <!-- Titlebar -->
+    <div>
+        <div class="progress formtitle" style="text-align: center; max-width:1600px; width:100%">
+            <div id="titleBar" class="progress-bar" role="progressbar">
+                Funnel Management Tool - Projects
+            </div>
+        </div>
+    </div>
+
+
+    <div class="row">
+        <div class="col-md-10 col-md-offset-1">
+            <div id="serverValidationError" class="alert alert-danger" style="display:none">
+                <div>
+                    <!--validation error content-->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Placeholder for the Grid-->
+    <div id="grid"></div>
+
+    <!--Placeholder for the Grid operation-->
+    <div id="details"></div>
+
+    <!-- Placeholder for the modal window (Change Status) -->
+    <div id="divChangeStatusModal"></div>
+
+    <script type="text/javascript" src="/scripts/projects.js" th:src="@{/scripts/projects.js}"></script>
+</div>
+
+
+
+</body>
+</html>

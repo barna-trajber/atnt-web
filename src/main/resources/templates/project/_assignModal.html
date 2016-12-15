@@ -1,0 +1,71 @@
+﻿<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout"
+      layout:decorate="layout">
+<head>
+    
+</head>
+<body>
+
+<div th:fragment="bodyFragment">
+
+    <script src="/lib/kendo/js/kendo.combobox.min.js" type="text/javascript"></script>
+
+
+    <!--Add Details modal (bootstrap modal)-->
+    <form action="appservices/assign" method="post"
+          class="form-horizontal form-input"
+          role="form"
+          id="frmDetails" data-projectid=""
+          style="width: 100%; max-width: 1600px">
+
+    <!-- Modal -->
+    <div class="modal fade detailsModal"
+         id="modalProjectsAssign" tabindex="-1" role="dialog" data-catid="-1"
+         aria-labelledby="modalProjectsAssignLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <!--Modal header-->
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="modalProjectsAssignLabel">Assign to APM/SPM</h4>
+                </div>
+                <!--Modal body-->
+                <div class="modal-body">
+                    <!--Group selector + Income/Expense button -->
+                    <div class="row" style="margin-top: 15px">
+                        <!--Group label-->
+                        <div class="col-md-3 label-custom" style="padding-top: 6px">
+                            <label class="control-label-horiz">APM/SPM</label>
+                            <span class="required">*</span>
+                        </div>
+
+                        <!--Group combobox-->
+                        <div class="col-md-9">
+                            <div style="width: 100%;" id="divGroups" class="label-left">
+                                <!--placeholder-->
+                                <input id="comboAPM" name="comboAPM" placeholder="Select APM/SPM..." style="width: 100%;"/>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Modal footer-->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" id="btnCancel" name="btnCancel" data-dismiss="modal">
+                            Cancel
+                        </button>
+                        <button type="submit" id="btnAdd" class="btn btn-danger">OK</button>
+                        <input id="projectid" name="projectid" type="hidden" value=""/> <!--ID hidden input field-->
+                    </div>
+                </div><!-- /.modal-body -->
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+    </form>
+
+    <script type="text/javascript" src="/scripts/projects-modal-assign.js"></script>
+
+</div>
+</body>
+</html>

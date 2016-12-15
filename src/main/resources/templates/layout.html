@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:layout="http://www.ultraq.net.nz/web/thymeleaf/layout">
+<head>
+<title>Layout</title>
+	<link rel="stylesheet" th:href="@{/lib/bootstrap/dist/css/bootstrap.min.css}" href="/static/lib/bootstrap/dist/css/bootstrap.min.css" />
+	<link rel="stylesheet" th:href="@{/css/style.css}" href="/css/style.css"/>
+	<link rel="stylesheet" th:href="@{/css/menu.css}" href="/css/menu.css"/>
+
+	<!--Link kendo css files-->
+	<link th:href="@{/lib/kendo/style/kendo.common.min.css}" href="/lib/kendo/style/kendo.common.min.css" rel="stylesheet" type="text/css" />
+	<link th:href="@{/lib/kendo/style/kendo.dataviz.min.css}" href="/lib/kendo/style/kendo.dataviz.min.css" rel="stylesheet" type="text/css" />
+	<link th:href="@{/lib/kendo/style/kendo.default.min.css}" href="/lib/kendo/style/kendo.default.min.css" rel="stylesheet" type="text/css" />
+	<link th:href="@{/lib/kendo/style/kendo.dataviz.default.min.css}" href="/lib/kendo/style/kendo.dataviz.default.min.css" rel="stylesheet" type="text/css" />
+	<link th:href="@{/lib/kendo/style/kendo.common-custom.min.css}" href="/lib/kendo/style/kendo.common-custom.min.css" rel="stylesheet" type="text/css" />
+
+	<!-- <script th:src="@{/lib/jquery/dist/jquery.min.js}" src="/lib/jquery/dist/jquery.min.js"></script> -->
+	<script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"></script>
+
+
+	<!--Link kendo js files-->
+	<script th:src="@{/lib/kendo/js/kendo.all.min.js}" src="/static/lib/kendo/js/kendo.all.min.js" type="text/javascript"></script>
+	<script th:src="@{/lib/kendo/js/kendo.web.min.js}" src="/static/lib/kendo/js/kendo.web.min.js" type="text/javascript"></script>
+	<script th:src="@{/lib/kendo/js/kendo.aspnetmvc.min.js}" src="/static/lib/kendo/js/kendo.aspnetmvc.min.js" type="text/javascript"></script>
+	<script th:src="@{/lib/kendo/js/kendo.modernizr.custom.js}" src="/static/lib/kendo/js/kendo.modernizr.custom.js" type="text/javascript"></script>
+
+	<script th:src="@{/scripts/menu.js}" src="/scripts/menu.js" type="text/javascript"></script>
+</head>
+
+<body class="content">
+	<header th:replace="fragments/header :: header">
+		menu
+	</header>
+
+	<div id="ajaxLoader" style="display: none"></div>
+
+	<div class="mainContent">
+		<div class="row" style="margin: 0">
+			<div class="col-sm-12 text-center">
+				<!--Body content-->
+				<div id="divBody">
+					<div layout:fragment="content">Fake content</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!--Footer-->
+	<footer>
+		<p>&copy; 2016 - Funnel Management Tool</p>
+	</footer>
+
+	<script th:src="@{/lib/bootstrap/dist/js/bootstrap.min.js}" src="/lib/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+
+</body>
+</html>

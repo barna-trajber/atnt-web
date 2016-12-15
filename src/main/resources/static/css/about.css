@@ -1,0 +1,41 @@
+﻿.jumbotron {
+    margin-top: 100px;
+}
+
+.about-login {
+    margin-top: 20px;
+}
+
+.loginbtn {
+
+    width: 80px;
+    height: 30px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    background-color: #5aaafa;
+    color: #152935;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 30px;
+    padding: 0 15px;
+    -webkit-transition: background 200ms ease-in;
+    transition: background 200ms ease-in;
+    border-radius: 0;
+
+    margin-top: 15px;    
+    padding: 0 20px 0 20px !important;
+
+    display: inline-flex;
+    font-weight: 700;
+}
+
+.loginbtn:hover {
+    background-color: #73b7fb;
+    text-decoration: none;
+}
+
+.signoutbtn {
+    margin-top: 15px;
+}
